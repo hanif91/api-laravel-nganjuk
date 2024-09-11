@@ -67,10 +67,9 @@ class ApiController extends Controller
 
     public function bayarTagihan(PaymentRequest $request)
     {
-
+       dd($request);
         if(!cache()->has($request->request_id))
             return $this->invalid("Request tidak valid");
-
 
         $data = cache($request->request_id);
 
